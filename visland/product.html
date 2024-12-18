@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        a{
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+    <title>Product</title>
+    </head>
+    <body>
+      <div class="menu">
+        <figcaption >
+            <a class="Single" target="1">One</a>
+            <a class="Single" target="2">Two</a>
+            <a class="Single" target="3">Three</a>
+        </figcaption>
+      </div>
+
+        <div id="div1" class="target" >Content One</div>
+        <div id="div2" class="target">Content Two</div>
+        <div id="div3" class="target">Content Three</div>
+   
+
+    <script type="text/javascript">
+    jQuery(function(){
+           jQuery('.target').hide();
+           jQuery('#showall').click(function(){
+           jQuery('.target').show();
+    });
+
+    jQuery('.Single').click(function(){
+        jQuery('.target').hide();
+        jQuery('#div'+$(this).attr('target')).show();
+    });
+});
+    </script>
+    </body>
